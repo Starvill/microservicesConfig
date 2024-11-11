@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/productdb  # URL подключения к базе данных productdb
+    username: postgres
+    password: 35456156789Ghkl10aGhkl10a!
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: product-service
+
+server:
+  port: 8082  # Порт, на котором работает Product Service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
