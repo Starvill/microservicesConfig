@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/userdb  # URL подключения к базе данных userdb
+    username: postgres  # Логин для подключения к базе
+    password: 35456156789Ghkl10aGhkl10a!  # Пароль для подключения к базе
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: user-service
+
+server:
+  port: 8081  # Порт, на котором работает User Service
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
